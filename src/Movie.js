@@ -26,7 +26,7 @@ export default class Movie extends Component {
     if (isLike) {
       // We want to save a movie in our db
       // Here, we are using ES6 syntax, so we do not need to store this in ctx.
-      fetch('http://localhost:3000/mymovies', {
+      fetch('https://backmymoviz.herokuapp.com/mymovies', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -37,7 +37,7 @@ export default class Movie extends Component {
       });
     } else {
       // Here we want to delete a movie in our database
-      fetch(`http://localhost:3000/mymovies/${this.props.movieId}`, {
+      fetch(`https://backmymoviz.herokuapp.com/${this.props.movieId}`, {
         method: 'DELETE'})
         .catch((error) => {
         console.error(error);
