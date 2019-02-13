@@ -40,7 +40,7 @@ class App extends Component {
   // We need to wait until the end of the fetch to render our component
   componentDidMount() {
     var ctx = this;
-    fetch('http://localhost:3000/movies')
+    fetch('https://dashboard.heroku.com/apps/backmymoviz/movies')
     .then(function(response){
       return response.json();
     }).then(function(data){
@@ -50,7 +50,7 @@ class App extends Component {
       console.error(error);
     });
 
-    fetch('http://localhost:3000/mymovies')
+    fetch('https://dashboard.heroku.com/apps/backmymoviz/mymovies')
     .then(function(response){
       return response.json();
     }).then(function(movies) {
